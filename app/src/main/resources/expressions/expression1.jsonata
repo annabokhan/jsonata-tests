@@ -1,0 +1,4 @@
+metric.distribution.dataPoints.{
+    "attributes": $merge([attributes, {"workflow":  "first" }, {"logDensity" : (distributionValue.intSum > 20 ? "HIGH":"LOW")}]),
+    "entities": $$.metric.entities, "timestamp": timestamp, "type": "logs:logdensity", "spanId": "ea35d3777246e2d9", "traceId": "27eeb9c8944c67c085ae4f4df9cae9ea"
+}

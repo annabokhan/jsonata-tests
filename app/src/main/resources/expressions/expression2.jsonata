@@ -1,0 +1,9 @@
+$not(traceId and spanId) ? (
+        $matchFn := function($entry) {(
+            $matches := $match($keys($entry)[0], /^(trace)|(span)[_\\-\\.]?id$/i, 1);
+            $matches.groups[0] ? { 'traceId': $entry.* } :
+            $matches.groups[1] ? { 'spanId': $entry.* };
+        )};
+        $spread(attributes).($matchFn($))
+    )
+    : {'traceId': traceId, 'spanId': spanId}

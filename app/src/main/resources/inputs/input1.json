@@ -1,0 +1,62 @@
+{
+  "metric": {
+    "entities": [
+      {
+        "type": "k8s:pod",
+        "id": "entityId"
+      }
+    ],
+    "type": "logs:logs.count",
+    "distribution": {
+      "aggregationTemporality": "DELTA",
+      "isMonotonic": false,
+      "dataPoints": [
+        {
+          "attributes": {
+            "severity": "INFO",
+            "dummy": "xyz"
+          },
+          "groupCount": 1,
+          "timestamp": 1659084840000,
+          "granularitySecs": 60,
+          "distributionValue": {
+            "intSum": 12,
+            "count": 1,
+            "max": 12,
+            "min": 12
+          }
+        },
+        {
+          "attributes": {
+            "severity": "INFO",
+            "dummy": "xyz"
+          },
+          "timestamp": 1659084720000,
+          "granularitySecs": 60,
+          "groupCount": 1,
+          "distributionValue": {
+            "intSum": 21,
+            "count": 1,
+            "max": 21,
+            "min": 21
+          }
+        },
+        {
+          "attributes": {
+            "severity": "DEBUG",
+            "dummy": "xyz"
+          },
+          "timestamp": 1659084600000,
+          "granularitySecs": 60,
+          "groupCount": 1,
+          "distributionValue": {
+            "intSum": 2,
+            "count": 1,
+            "max": 2,
+            "min": 2
+          }
+        }
+      ]
+    }
+  }
+}
